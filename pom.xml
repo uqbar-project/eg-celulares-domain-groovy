@@ -16,15 +16,22 @@
 	</parent>
 
 	<dependencies>
+		<!-- UQBAR -->
 		<dependency>
 			<groupId>org.uqbar-project</groupId>
 			<artifactId>uqbar-domain</artifactId>
 			<version>3.3</version>
 		</dependency>
-		<dependency>
-			<groupId>uqbar</groupId>
-			<artifactId>util-commons</artifactId>
-			<version>3.0.1-SNAPSHOT</version>
-		</dependency>
+		<!-- /UQBAR -->
 	</dependencies>
+
+
+
+
+
+
+
+
+
+
 </project>
