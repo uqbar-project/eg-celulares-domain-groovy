@@ -1,6 +1,6 @@
 package ar.edu.celulares.home
 
-import org.apache.commons.collections15.Predicate;
+import org.apache.commons.collections15.Predicate
 import org.uqbar.commons.model.CollectionBasedHome
 
 import ar.edu.celulares.domain.Modelo

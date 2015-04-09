@@ -3,9 +3,8 @@ package ar.edu.celulares.domain
 import org.uqbar.commons.model.Entity
 import org.uqbar.commons.model.ObservableUtils
 import org.uqbar.commons.model.UserException
-import org.uqbar.commons.utils.Observable
 
-@Observable
+@org.uqbar.commons.utils.Observable
 class Celular extends Entity {
 
 	public final int MAX_NUMERO = 100000
