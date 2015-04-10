@@ -6,6 +6,7 @@ import org.uqbar.commons.model.UserException
 import org.uqbar.commons.utils.ApplicationContext
 
 import ar.edu.celulares.domain.Celular
+import ar.edu.celulares.domain.Modelo
 
 @org.uqbar.commons.utils.Observable
 class HomeCelulares extends CollectionBasedHome<Celular> {
@@ -15,11 +16,15 @@ class HomeCelulares extends CollectionBasedHome<Celular> {
 	def static synchronized getInstance() {
 		if (!instance) {
 			instance = new HomeCelulares()
+			instance.init()
 		}
 		instance
 	}
 
 	def HomeCelulares() {
+	}
+	
+	def init() {
 		this.create(new Celular(nombre: "Laura Iturbe", numero: 88022202, modeloCelular: getModelo("NOKIA LUMIA 625"), recibeResumenCuenta: false))
 		this.create(new Celular(nombre: "Julieta Passerini", numero: 45636453, modeloCelular: getModelo("NOKIA ASHA 501"), recibeResumenCuenta: false))
 		this.create(new Celular(nombre: "Debora Fortini", numero: 45610892, modeloCelular: getModelo("NOKIA ASHA 501"), recibeResumenCuenta: true))
@@ -28,7 +33,7 @@ class HomeCelulares extends CollectionBasedHome<Celular> {
 	}
 
 	def getModelo(modeloDescripcion) {
-		ApplicationContext.instance.getSingleton(HomeModelos.class).get(modeloDescripcion)
+		ApplicationContext.instance.getSingleton(Modelo.class).get(modeloDescripcion)
 	}
 
 	// ********************************************************
